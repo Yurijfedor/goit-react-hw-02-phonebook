@@ -4,27 +4,32 @@ export const FormEl = styled.form`
   padding: ${p => p.theme.space[4]}px;
   display: grid;
   gap: 10px;
-  border: ${p => p.theme.borders.normal};
+  border: ${p => p.theme.borders.medium};
   border-color: ${p => p.theme.colors.text};
 `;
 
 export const LabelEl = styled.label`
   display: grid;
-  gap: 5px;
+  gap: ${p => p.theme.space[3]}px;
   flex-direction: column;
   max-width: 200px;
+  font-size: ${p => p.theme.fontSizes.md};
+`;
+
+export const LabelFilterEl = styled.label`
+  display: flex;
+  gap: ${p => p.theme.space[3]}px;
 `;
 
 export const ButtonEl = styled.button`
   width: 100px;
-  margin: 5px 10px;
-  background-color: #0a0131ab;
-  color: white;
-  border-radius: 7px;
-  border-color: #0a0131ab;
+  margin-left: ${p => p.theme.space[4]}px;
+  background-color: ${p => p.theme.colors.blue};
+  color: ${p => p.theme.colors.accent};
+  border-radius: ${p => p.theme.radii.normal};
+  border-color: ${p => p.theme.colors.theadBgColor};
   &:hover {
-    background-color: white;
-    color: #0a0131ab;
-    border-color: #0a0131ab;
+    background-color: ${p => p.theme.colors.accent};
+    color: ${p => p.theme.colors.blue};
   }
 `;

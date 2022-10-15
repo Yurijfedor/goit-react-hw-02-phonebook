@@ -1,16 +1,18 @@
 import PropTypes from 'prop-types';
+import { ButtonEl } from './contactForm.styled';
+import { Box } from 'constans';
 
 export const Contact = ({
   contactInfo: { name, number, id },
   onDeleteContact,
 }) => {
   return (
-    <>
+    <Box display="flex" justifyContent="space-between">
       {name}: {number}
-      <button data-id={id} onClick={() => onDeleteContact(id)}>
+      <ButtonEl data-id={id} onClick={() => onDeleteContact(id)}>
         Delete
-      </button>
-    </>
+      </ButtonEl>
+    </Box>
   );
 };
 

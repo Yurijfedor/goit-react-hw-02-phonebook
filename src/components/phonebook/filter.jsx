@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
+import { LabelFilterEl } from './contactForm.styled';
 
 export class Filter extends Component {
   getFilterValue = evt => {
@@ -9,10 +10,10 @@ export class Filter extends Component {
 
   render() {
     return (
-      <label>
+      <LabelFilterEl>
         Find contacts by name
         <input onChange={this.getFilterValue} type="text" />
-      </label>
+      </LabelFilterEl>
     );
   }
 }
