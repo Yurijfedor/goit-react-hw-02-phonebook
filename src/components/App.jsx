@@ -27,6 +27,7 @@ export class App extends Component {
       number,
       id: nanoid(),
     };
+    console.log(contact.name);
     const checkName = contacts.find(el => {
       return el.name === contact.name;
     });
